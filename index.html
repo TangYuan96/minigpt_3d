@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MiniGPT-3D">
+  <meta name="keywords" content="MiniGPT-3D, open-source, point-language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniGPT-3D</title>
+
+  
+
+  <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+/*        background-color: red;*/
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+  </style>
+
+
+
+  <body>
+
+<script>
+  window.addEventListener('load', function() {
+    const urls = [
+      'https://876a8d3e814b8c3a8b.gradio.live',
+      'https://a51cb1bdf92ad731d6.gradio.live',
+    ];
+    const randomIndex = Math.floor(Math.random() * urls.length);
+    const randomURL = urls[randomIndex];
+    document.getElementById('randomLink').href = randomURL;
+  });
+</script>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="color:green">MiniGPT-3D:</h1>
+          <h2 class="title is-2 publication-title">Efficiently Aligning 3D Point Clouds with Large Language Models using 2D Priors&nbsp;</h2>
+          <div class="is-size-5">
+            <span class="author-block">
+              <a style="color:#008AD7;font-weight:normal;">Yuan Tang</a>,</span>
+            <span class="author-block">
+                <a  style="color:#008AD7;font-weight:normal;">Xu Han</a>,</span>                
+            </span>
+            <span class="author-block">
+              <a   style="color:#008AD7;font-weight:normal;">Xianzhi Li<sup>&#x2628;</sup></a>,
+            </span>
+            <span class="author-block">
+              <a  style="color:#008AD7;font-weight:normal;">Qiao Yu</a>,
+            </span>
+            <span class="author-block">
+              <a  style="color:#008AD7;font-weight:normal;">Yixue Hao</a>,
+            </span>
+            <span class="author-block">
+              <a style="color:#008AD7;font-weight:normal;">Long Hu</a>,
+            </span>
+            <span class="author-block">
+              <a  style="color:#F2A900;font-weight:normal;">Min Chen</a>
+            </span>
+          </div>
+
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Huazhong University of Science and Technology   </span>
+            <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b>South China University of Technology</span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+
+            <span class="author-block"><sup>&#x2628;</sup>Corresponding author</span>
+
+          </div>
+		  
+		            <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block"><sup>*</sup>Equal Contribution </span> -->
+            <span class="author-block"><strong>ACM MM 2024</strong></span>
+
+          </div>
+
+
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.01413" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://github.com/TangYuan96/MiniGPT-3D" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                      <a href="https://huggingface.co/YuanTang96/MiniGPT-3D" target="_blank"
+                         class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        🤗
+                      </span>
+                      <span>Model</span>
+                    </a>
+                 </span>
+              
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+
+	
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+<!--        <h2 class="title is-3">Pipeline</h2>-->
+        <div class="content has-text-justified">
+
+        </div>  
+
+        <h3 class="subtitle has-text-centered">
+          <p ><b>MiniGPT-3D takes  <strong  style="color: green;">the first step in efficient 3D-LLM</strong>, we hope that MiniGPT-3D can bring new insights to this community.</b></p>
+        </h3> 
+        <img id="gradio_1" width="100%" src="images/conv_demo_input_id.gif">
+ 
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Overall</h2>
+
+        <img id="model" width="120%" src="images/about_0.jpg">
+ 
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+	
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Contributions</h2>
+        <div class="content has-text-justified">
+    <ul class="content has-text-justified">
+      <li>We present MiniGPT-3D, an efficient and powerful 3D-LLM that aligns 3D points with LLMs using 2D priors. It is trained with <strong style="color: green;">47.8M</strong> learnable parameters in just <strong style="color: green;">26.8 hours on a single RTX 3090 GPU</strong>.</li>
+      
+      <li>We propose an efficient four-stage training strategy in a cascaded way, gradually transferring the knowledge from 2D-LLMs.</li>
+      
+      <li>We design the mixture of query experts to aggregate multiple features from different experts with only 0.4M parameters.</li>
+      
+      <li>Extensive experiments show the superior performance of MiniGPT-3D on multiple tasks while <strong style="color: green;">reducing the training time and parameters by up to 6x and 260x</strong>, respectively.</li>
+    </ul>
+			
+        </div>  
+ 
+ 
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="content has-text-justified">
+
+        </div>  
+        <img id="model" width="120%" src="images/overview_1.jpg">
+ 
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+	
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+
+		</div>  
+		<img id="reusults_1" width="120%" src="images/results_form_openai.png">
+		<br>
+		<br>
+		<img id="reusults_2" width="120%" src="images/result_2.jpg">
+ 
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+	
+
+
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Dialogue Examples</h2>
+      <div class="has-text-centered">
+        <img id="QA_1" width="80%" src="images/QA_00.jpg">
+      </div>
+      <br>
+      <div class="has-text-centered">
+        <img id="QA_2" width="80%" src="images/QA_11.jpg">
+      </div>
+      <br>
+      <div class="has-text-centered">
+        <img id="QA_3" width="80%" src="images/QA_33.jpg">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{tang2024minigpt,
+  title={MiniGPT-3D: Efficiently Aligning 3D Point Clouds with Large Language Models using 2D Priors},
+  author={Tang, Yuan and Han, Xu and Li, Xianzhi and Yu, Qiao and Hao, Yixue and Hu, Long and Chen, Min},
+  journal={arXiv preprint arXiv:2405.01413},
+  year={2024}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website is adapted from <a
+      href="https://minigpt-v2.github.io/">MiniGPT-v2</a> and <a
+      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
+
+
+</body>
+
+</html>
